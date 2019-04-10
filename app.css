@@ -1,0 +1,23 @@
+.cox-animation {
+ animation: cox 10s linear infinite;
+ width: 120px;
+ height: 50px;
+}
+
+@keyframes cox {
+ 
+ from {
+   transform: translate(0px);
+   background-image: url("coxaller.jpg");
+ }
+
+ 50% {
+   transform: translate(1780px);
+    }
+  
+ to {
+  background-image: url("coxretour.jpg");
+   transform: translate(0px);
+ }
+}
+
