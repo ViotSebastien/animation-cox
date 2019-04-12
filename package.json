@@ -1,0 +1,25 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViotSebastien/animation-cox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViotSebastien/animation-cox/issues"
+  },
+  "homepage": "https://github.com/ViotSebastien/animation-cox#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  }
+}

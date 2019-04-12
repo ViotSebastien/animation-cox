@@ -1,0 +1,28 @@
+body{
+ width: 100%;
+}
+
+.cox-animation {
+ animation: cox 10s linear infinite;
+ height: 50px;
+ background-repeat: no-repeat; 
+ background-size: 150px;
+}
+
+@keyframes cox {
+ 
+ from {
+   transform: translate(0px);
+   background-image: url("../images/coxaller.jpg");
+ }
+
+ 50% {
+   transform: translate(93%);
+    }
+  
+ to {
+  background-image: url("../images/coxretour.jpg");
+   transform: translate(0px);
+ }
+}
+
