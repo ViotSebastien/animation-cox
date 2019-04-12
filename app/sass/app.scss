@@ -14,7 +14,7 @@ border: 5px solid red;
   animation: cox 10s linear, coximage 10s step-end;
   -webkit-animation: cox 10s linear, coximage 10s step-end;
   animation-iteration-count: infinite;
-  background-image: url("coxaller.jpg");
+  background-image: url("../images/coxaller.jpg");
 
 }
 
@@ -32,7 +32,7 @@ border: 5px solid red;
 
 @-webkit-keyframes coximage {
  50% {
-   background-image: url("coxretour.jpg");
+   background-image: url("../images/coxretour.jpg");
  }
 }
 
@@ -50,7 +50,7 @@ border: 5px solid red;
 
 @keyframes coximage {
  50% {
-   background-image: url("coxretour.jpg");
+   background-image: url("../images/coxretour.jpg");
  }
 }
 
