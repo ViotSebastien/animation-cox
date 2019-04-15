@@ -1,0 +1,166 @@
+$largeurparent: 100%;
+$hauteurparent: 60px;
+$largeurimage: 15%;
+$hauteurimage: 100%;
+$timecox: 10s;
+$timecombi: 15s;
+$timeporche: 20s;
+
+.parent {
+  width: $largeurparent;
+  height: $hauteurparent;
+  position: relative;
+  border: 5px solid red;
+
+  .cox-animation {
+    height: $hauteurimage;
+    width : $largeurimage;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation: cox $timecox linear, coximage $timecox step-end;
+    -webkit-animation: cox $timecox linear, coximage $timecox step-end;
+    animation-iteration-count: infinite;
+    background-image: url("../../images/coxaller.jpg");
+  }
+  .combi-animation {
+    height: $hauteurimage;
+    width : $largeurimage;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation: combi $timecombi linear, combiimage $timecombi step-end;
+    -webkit-animation: combi $timecombi linear, combiimage $timecombi step-end;
+    animation-iteration-count: infinite;
+    background-image: url("../../images/coxaller.jpg");
+  }
+  .porche-animation {
+    height: $hauteurimage;
+    width : $largeurimage;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation: porche $timeporche linear, porcheimage $timeporche step-end;
+    -webkit-animation: porche $timeporche linear, porcheimage $timeporche step-end;
+    animation-iteration-count: infinite;
+    background-image: url("../../images/coxaller.jpg");
+  }
+}
+
+//#################### COX ##################
+
+@-webkit-keyframes cox {
+ from {
+   transform: translate(0%);
+   }
+ 50% {
+    transform: translate(600%);
+ }
+ to{
+   transform: translate(0%);
+ }
+}
+
+@-webkit-keyframes coximage {
+ 50% {
+   background-image: url("../../images/coxretour.jpg");
+ }
+}
+
+@keyframes cox {
+ from {
+   transform: translate(0%);
+   }
+  40% {
+   transform: rotate3d(2, 1, 10, -20deg);
+ }
+ 50% {
+    transform: translate(600%);
+ }
+ to{
+   transform: translate(0%);
+ }
+}
+
+@keyframes coximage {
+ 50% {
+   background-image: url("../../images/coxretour.jpg");
+ }
+}
+
+//#################### Combi ##################
+
+@-webkit-keyframes combi {
+ from {
+   transform: translate(0%);
+   }
+ 50% {
+    transform: translate(600%);
+ }
+ to{
+   transform: translate(0%);
+ }
+}
+
+@-webkit-keyframes combiimage {
+ 50% {
+   background-image: url("../../images/coxretour.jpg");
+ }
+}
+
+@keyframes combi {
+ from {
+   transform: translate(0%);
+   }
+ 20% {
+   transform: translateY(40px);
+ }
+ 30% {
+   transform: translateY(0%);
+ }
+ 50% {
+    transform: translate(600%);
+ }
+ to{
+   transform: translate(0%);
+ }
+}
+
+@keyframes combiimage {
+ 50% {
+   background-image: url("../../images/coxretour.jpg");
+ }
+}
+//#################### Porche ##################
+@-webkit-keyframes porche {
+ from {
+   transform: translate(0%);
+   }
+ 50% {
+    transform: translate(600%);
+ }
+ to{
+   transform: translate(0%);
+ }
+}
+
+@-webkit-keyframes porcheimage {
+ 50% {
+   background-image: url("../../images/coxretour.jpg");
+ }
+}
+
+@keyframes proche {
+ from {
+   transform: translate(0%);
+   }
+ 50% {
+    transform: translate(600%);
+ }
+ to{
+   transform: translate(0%);
+ }
+}
+
+@keyframes porcheimage {
+ 50% {
+   background-image: url("../../images/coxretour.jpg");
+ }
+}

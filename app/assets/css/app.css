@@ -1,0 +1,110 @@
+.parent {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  border: 5px solid red; }
+  .parent .cox-animation {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation: cox 10s linear, coximage 10s step-end;
+    -webkit-animation: cox 10s linear, coximage 10s step-end;
+    animation-iteration-count: infinite;
+    background-image: url("../../images/coxaller.jpg"); }
+  .parent .combi-animation {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation: combi 15s linear, combiimage 15s step-end;
+    -webkit-animation: combi 15s linear, combiimage 15s step-end;
+    animation-iteration-count: infinite;
+    background-image: url("../../images/coxaller.jpg"); }
+  .parent .porche-animation {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation: porche 20s linear, porcheimage 20s step-end;
+    -webkit-animation: porche 20s linear, porcheimage 20s step-end;
+    animation-iteration-count: infinite;
+    background-image: url("../../images/coxaller.jpg"); }
+
+@-webkit-keyframes cox {
+  from {
+    transform: translate(0%); }
+  50% {
+    transform: translate(600%); }
+  to {
+    transform: translate(0%); } }
+
+@-webkit-keyframes coximage {
+  50% {
+    background-image: url("../../images/coxretour.jpg"); } }
+
+@keyframes cox {
+  from {
+    transform: translate(0%); }
+  40% {
+    transform: rotate3d(2, 1, 10, -20deg); }
+  50% {
+    transform: translate(600%); }
+  to {
+    transform: translate(0%); } }
+
+@keyframes coximage {
+  50% {
+    background-image: url("../../images/coxretour.jpg"); } }
+
+@-webkit-keyframes combi {
+  from {
+    transform: translate(0%); }
+  50% {
+    transform: translate(600%); }
+  to {
+    transform: translate(0%); } }
+
+@-webkit-keyframes combiimage {
+  50% {
+    background-image: url("../../images/coxretour.jpg"); } }
+
+@keyframes combi {
+  from {
+    transform: translate(0%); }
+  20% {
+    transform: translateY(40px), translateX(300%); }
+  30% {
+    transform: translateY(0%); }
+  50% {
+    transform: translate(600%); }
+  to {
+    transform: translate(0%); } }
+
+@keyframes combiimage {
+  50% {
+    background-image: url("../../images/coxretour.jpg"); } }
+
+@-webkit-keyframes porche {
+  from {
+    transform: translate(0%); }
+  50% {
+    transform: translate(600%); }
+  to {
+    transform: translate(0%); } }
+
+@-webkit-keyframes porcheimage {
+  50% {
+    background-image: url("../../images/coxretour.jpg"); } }
+
+@keyframes proche {
+  from {
+    transform: translate(0%); }
+  50% {
+    transform: translate(600%); }
+  to {
+    transform: translate(0%); } }
+
+@keyframes porcheimage {
+  50% {
+    background-image: url("../../images/coxretour.jpg"); } }
