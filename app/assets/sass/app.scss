@@ -1,10 +1,21 @@
 $largeurparent: 100%;
 $hauteurparent: 60px;
+
 $largeurimage: 15%;
 $hauteurimage: 100%;
+
 $timecox: 10s;
 $timecombi: 15s;
 $timeporche: 20s;
+
+$tailleanimation: 600%;
+
+$lienimagecox: "../../images/coxretour.jpg";
+$lienimagecombi: "../../images/coxretour.jpg";
+$lienimageporche: "../../images/coxretour.jpg";
+
+
+@import "mixin.scss";
 
 .parent {
   width: $largeurparent;
@@ -17,8 +28,8 @@ $timeporche: 20s;
     width : $largeurimage;
     position: absolute;
     background-repeat: no-repeat;
-    animation: cox $timecox linear, coximage $timecox step-end;
-    -webkit-animation: cox $timecox linear, coximage $timecox step-end;
+    animation: cox $timecox linear, coximage $timecox step-end,coxcabrer $timecox ease 1s;
+    -webkit-animation: cox $timecox linear, coximage $timecox step-end,coxcabrer $timecox ease 1s;
     animation-iteration-count: infinite;
     background-image: url("../../images/coxaller.jpg");
   }
@@ -43,124 +54,48 @@ $timeporche: 20s;
     background-image: url("../../images/coxaller.jpg");
   }
 }
-
-//#################### COX ##################
-
+// "##################### cox animation #####################"
 @-webkit-keyframes cox {
- from {
-   transform: translate(0%);
-   }
- 50% {
-    transform: translate(600%);
- }
- to{
-   transform: translate(0%);
- }
+@include trajet($tailleanimation);
 }
-
 @-webkit-keyframes coximage {
- 50% {
-   background-image: url("../../images/coxretour.jpg");
- }
+@include image($lienimagecox);
 }
-
+@-webkit-keyframes coxcabrer {
+@include cabrer(10deg);
+}
 @keyframes cox {
- from {
-   transform: translate(0%);
-   }
-  40% {
-   transform: rotate3d(2, 1, 10, -20deg);
- }
- 50% {
-    transform: translate(600%);
- }
- to{
-   transform: translate(0%);
- }
+@include trajet($tailleanimation);
 }
-
 @keyframes coximage {
- 50% {
-   background-image: url("../../images/coxretour.jpg");
- }
+@include image($lienimagecox);
 }
-
-//#################### Combi ##################
-
+@keyframes coxcabrer {
+@include cabrer(10deg);
+}
+// "##################### Combi animation #####################"
 @-webkit-keyframes combi {
- from {
-   transform: translate(0%);
-   }
- 50% {
-    transform: translate(600%);
- }
- to{
-   transform: translate(0%);
- }
+@include trajet($tailleanimation);
 }
-
 @-webkit-keyframes combiimage {
- 50% {
-   background-image: url("../../images/coxretour.jpg");
- }
+@include image($lienimagecombi);
 }
-
 @keyframes combi {
- from {
-   transform: translate(0%);
-   }
- 20% {
-   transform: translateY(40px);
- }
- 30% {
-   transform: translateY(0%);
- }
- 50% {
-    transform: translate(600%);
- }
- to{
-   transform: translate(0%);
- }
+@include trajet($tailleanimation);
 }
-
 @keyframes combiimage {
- 50% {
-   background-image: url("../../images/coxretour.jpg");
- }
+@include image($lienimagecombi);
 }
-//#################### Porche ##################
+// "##################### Porche animation #####################"
 @-webkit-keyframes porche {
- from {
-   transform: translate(0%);
-   }
- 50% {
-    transform: translate(600%);
- }
- to{
-   transform: translate(0%);
- }
+@include trajet($tailleanimation);
 }
-
 @-webkit-keyframes porcheimage {
- 50% {
-   background-image: url("../../images/coxretour.jpg");
- }
+@include image($lienimageporche);
 }
-
-@keyframes proche {
- from {
-   transform: translate(0%);
-   }
- 50% {
-    transform: translate(600%);
- }
- to{
-   transform: translate(0%);
- }
+@keyframes porche {
+@include trajet($tailleanimation);
 }
-
 @keyframes porcheimage {
- 50% {
-   background-image: url("../../images/coxretour.jpg");
- }
+@include image($lienimageporche);
 }

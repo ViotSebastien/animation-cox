@@ -1,0 +1,29 @@
+@mixin trajet($taille){
+   from {
+     transform: translate(0%);
+     }
+   50% {
+      transform: translate($taille);
+   }
+   to{
+     transform: translate(0%);
+   }
+  }
+
+@mixin image($lienimage) {
+   50% {
+     background-image: url($lienimage);
+   }
+  }
+
+@mixin cabrer($angle) {
+     60% {
+       transform: rotate(0deg);
+     }
+     75% {
+       transform: rotate($angle);
+     }
+     80%{
+       transform: rotate(0deg);
+    }
+}
