@@ -5,97 +5,121 @@ $largeurimage: 15%;
 $hauteurimage: 100%;
 
 $timecox: 10s;
-$timecombi: 15s;
-$timeporche: 20s;
+$timecombi: 10s;
+$timeporche: 10s;
 
-$tailleanimation: 600%;
+$tailleanimation: 100%;
+$angle: -15deg;
 
 $lienimagecox: "../../images/coxretour.jpg";
-$lienimagecombi: "../../images/coxretour.jpg";
-$lienimageporche: "../../images/coxretour.jpg";
+$lienimagecombi: "../../images/combi_retour.png";
+$lienimageporche: "../../images/porche_retour.png";
 
 
 @import "mixin.scss";
 
 .parent {
-  width: $largeurparent;
   height: $hauteurparent;
   position: relative;
-  border: 5px solid red;
+//  border: 5px solid red;
+  -webkit-animation: animation $timecox linear;
+  animation-iteration-count: infinite;
 
   .cox-animation {
     height: $hauteurimage;
     width : $largeurimage;
     position: absolute;
     background-repeat: no-repeat;
-    animation: cox $timecox linear, coximage $timecox step-end,coxcabrer $timecox ease 1s;
-    -webkit-animation: cox $timecox linear, coximage $timecox step-end,coxcabrer $timecox ease 1s;
+    animation: coximage $timecox step-end,coxcabrer $timecox ease;
+    -webkit-animation: coximage $timecox step-end,coxcabrer $timecox ease;
     animation-iteration-count: infinite;
     background-image: url("../../images/coxaller.jpg");
   }
+
   .combi-animation {
     height: $hauteurimage;
     width : $largeurimage;
     position: absolute;
     background-repeat: no-repeat;
-    animation: combi $timecombi linear, combiimage $timecombi step-end;
-    -webkit-animation: combi $timecombi linear, combiimage $timecombi step-end;
+    animation: combiimage $timecox step-end,combivirage $timecox ease;
+    -webkit-animation: combiimage $timecox step-end,combivirage $timecox ease;
     animation-iteration-count: infinite;
-    background-image: url("../../images/coxaller.jpg");
+    background-image: url("../../images/combi_aller.png");
+    background-size: contain;
   }
+
   .porche-animation {
     height: $hauteurimage;
     width : $largeurimage;
     position: absolute;
     background-repeat: no-repeat;
-    animation: porche $timeporche linear, porcheimage $timeporche step-end;
-    -webkit-animation: porche $timeporche linear, porcheimage $timeporche step-end;
+    animation: porcheimage $timeporche step-end,porchecabrer $timeporche linear;
+    -webkit-animation: porcheimage $timeporche step-end,porchecabrer $timeporche linear;
     animation-iteration-count: infinite;
-    background-image: url("../../images/coxaller.jpg");
+    background-image: url("../../images/porche.png");
+    background-size: contain;
   }
+
 }
-// "##################### cox animation #####################"
-@-webkit-keyframes cox {
+
+@-webkit-keyframes animation {
 @include trajet($tailleanimation);
 }
+
+@keyframes animation {
+@include trajet($tailleanimation);
+}
+// "##################### cox animation #####################"
+
 @-webkit-keyframes coximage {
 @include image($lienimagecox);
 }
 @-webkit-keyframes coxcabrer {
-@include cabrer(10deg);
-}
-@keyframes cox {
-@include trajet($tailleanimation);
+@include cabrer($angle);
 }
 @keyframes coximage {
 @include image($lienimagecox);
 }
 @keyframes coxcabrer {
-@include cabrer(10deg);
+@include cabrer($angle);
 }
+
 // "##################### Combi animation #####################"
-@-webkit-keyframes combi {
-@include trajet($tailleanimation);
-}
 @-webkit-keyframes combiimage {
 @include image($lienimagecombi);
 }
-@keyframes combi {
-@include trajet($tailleanimation);
+@-webkit-keyframes combicabrer {
+@include cabrer($angle);
+}
+@-webkit-keyframes combivirage {
+@include virage();
 }
 @keyframes combiimage {
 @include image($lienimagecombi);
 }
-// "##################### Porche animation #####################"
-@-webkit-keyframes porche {
-@include trajet($tailleanimation);
+@keyframes combicabrer {
+@include cabrer($angle);
 }
+@keyframes combivirage {
+@include virage();
+}
+// "##################### Porche animation #####################"
+
 @-webkit-keyframes porcheimage {
 @include image($lienimageporche);
 }
-@keyframes porche {
-@include trajet($tailleanimation);
+@-webkit-keyframes porchevirage {
+@include virage();
+}
+@-webkit-keyframes porchecabrer {
+@include montagne();
 }
 @keyframes porcheimage {
 @include image($lienimageporche);
+}
+@keyframes porchevirage {
+@include virage();
+}
+@keyframes porchecabrer {
+@include montagne();
 }

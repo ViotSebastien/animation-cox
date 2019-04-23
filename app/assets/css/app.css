@@ -1,15 +1,15 @@
 .parent {
-  width: 100%;
   height: 60px;
   position: relative;
-  border: 5px solid red; }
+  -webkit-animation: animation 10s linear;
+  animation-iteration-count: infinite; }
   .parent .cox-animation {
     height: 100%;
     width: 15%;
     position: absolute;
     background-repeat: no-repeat;
-    animation: cox 10s linear, coximage 10s step-end, coxcabrer 10s ease 1s;
-    -webkit-animation: cox 10s linear, coximage 10s step-end, coxcabrer 10s ease 1s;
+    animation: coximage 10s step-end, coxcabrer 10s ease;
+    -webkit-animation: coximage 10s step-end, coxcabrer 10s ease;
     animation-iteration-count: infinite;
     background-image: url("../../images/coxaller.jpg"); }
   .parent .combi-animation {
@@ -17,25 +17,35 @@
     width: 15%;
     position: absolute;
     background-repeat: no-repeat;
-    animation: combi 15s linear, combiimage 15s step-end;
-    -webkit-animation: combi 15s linear, combiimage 15s step-end;
+    animation: combiimage 10s step-end, combivirage 10s ease;
+    -webkit-animation: combiimage 10s step-end, combivirage 10s ease;
     animation-iteration-count: infinite;
-    background-image: url("../../images/coxaller.jpg"); }
+    background-image: url("../../images/combi_aller.png");
+    background-size: contain; }
   .parent .porche-animation {
     height: 100%;
     width: 15%;
     position: absolute;
     background-repeat: no-repeat;
-    animation: porche 20s linear, porcheimage 20s step-end;
-    -webkit-animation: porche 20s linear, porcheimage 20s step-end;
+    animation: porcheimage 10s step-end, porchecabrer 10s linear;
+    -webkit-animation: porcheimage 10s step-end, porchecabrer 10s linear;
     animation-iteration-count: infinite;
-    background-image: url("../../images/coxaller.jpg"); }
+    background-image: url("../../images/porche.png");
+    background-size: contain; }
 
-@-webkit-keyframes cox {
+@-webkit-keyframes animation {
   from {
     transform: translate(0%); }
   50% {
-    transform: translate(600%); }
+    transform: translate(100%); }
+  to {
+    transform: translate(0%); } }
+
+@keyframes animation {
+  from {
+    transform: translate(0%); }
+  50% {
+    transform: translate(100%); }
   to {
     transform: translate(0%); } }
 
@@ -44,77 +54,163 @@
     background-image: url("../../images/coxretour.jpg"); } }
 
 @-webkit-keyframes coxcabrer {
-  60% {
+  0% {
     transform: rotate(0deg); }
-  75% {
-    transform: rotate(10deg); }
-  80% {
-    transform: rotate(0deg); } }
-
-@keyframes cox {
-  from {
-    transform: translate(0%); }
+  30% {
+    transform: rotate(-15deg); }
   50% {
-    transform: translate(600%); }
-  to {
-    transform: translate(0%); } }
+    transform: rotate(0deg); } }
 
 @keyframes coximage {
   50% {
     background-image: url("../../images/coxretour.jpg"); } }
 
 @keyframes coxcabrer {
-  60% {
+  0% {
     transform: rotate(0deg); }
-  75% {
-    transform: rotate(10deg); }
-  80% {
-    transform: rotate(0deg); } }
-
-@-webkit-keyframes combi {
-  from {
-    transform: translate(0%); }
+  30% {
+    transform: rotate(-15deg); }
   50% {
-    transform: translate(600%); }
-  to {
-    transform: translate(0%); } }
+    transform: rotate(0deg); } }
 
 @-webkit-keyframes combiimage {
   50% {
-    background-image: url("../../images/coxretour.jpg"); } }
+    background-image: url("../../images/combi_retour.png"); } }
 
-@keyframes combi {
-  from {
-    transform: translate(0%); }
+@-webkit-keyframes combicabrer {
+  0% {
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(-15deg); }
   50% {
-    transform: translate(600%); }
-  to {
-    transform: translate(0%); } }
+    transform: rotate(0deg); } }
+
+@-webkit-keyframes combivirage {
+  0% {
+    transform: translateY(0px); }
+  20% {
+    transform: translateY(20px); }
+  40% {
+    transform: translateY(-20px); }
+  50% {
+    transform: translateY(0px); } }
 
 @keyframes combiimage {
   50% {
-    background-image: url("../../images/coxretour.jpg"); } }
+    background-image: url("../../images/combi_retour.png"); } }
 
-@-webkit-keyframes porche {
-  from {
-    transform: translate(0%); }
+@keyframes combicabrer {
+  0% {
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(-15deg); }
   50% {
-    transform: translate(600%); }
-  to {
-    transform: translate(0%); } }
+    transform: rotate(0deg); } }
+
+@keyframes combivirage {
+  0% {
+    transform: translateY(0px); }
+  20% {
+    transform: translateY(20px); }
+  40% {
+    transform: translateY(-20px); }
+  50% {
+    transform: translateY(0px); } }
 
 @-webkit-keyframes porcheimage {
   50% {
-    background-image: url("../../images/coxretour.jpg"); } }
+    background-image: url("../../images/porche_retour.png"); } }
 
-@keyframes porche {
-  from {
-    transform: translate(0%); }
+@-webkit-keyframes porchevirage {
+  0% {
+    transform: translateY(0px); }
+  20% {
+    transform: translateY(20px); }
+  40% {
+    transform: translateY(-20px); }
   50% {
-    transform: translate(600%); }
-  to {
-    transform: translate(0%); } }
+    transform: translateY(0px); } }
+
+@-webkit-keyframes porchecabrer {
+  0% {
+    transform: translateY(0px);
+    transform: rotate(0deg); }
+  20% {
+    transform: translateY(20px);
+    transform: rotate(-10deg); }
+  40% {
+    transform: translateY(-20px);
+    transform: rotate(0deg); }
+  50% {
+    transform: translateY(0px);
+    transform: rotate(0); }
+  60% {
+    transform: translateY(0px);
+    transform: rotate(0deg); }
+  70% {
+    transform: translateY(20px);
+    transform: rotate(10deg); }
+  80% {
+    transform: translateY(-20px);
+    transform: rotate(0deg); }
+  85% {
+    transform: translateY(20px);
+    transform: rotate(10deg); }
+  90% {
+    transform: translateY(-20px);
+    transform: rotate(0deg); }
+  95% {
+    transform: translateY(20px);
+    transform: rotate(10deg); }
+  100% {
+    transform: translateY(0px);
+    transform: rotate(0deg); } }
 
 @keyframes porcheimage {
   50% {
-    background-image: url("../../images/coxretour.jpg"); } }
+    background-image: url("../../images/porche_retour.png"); } }
+
+@keyframes porchevirage {
+  0% {
+    transform: translateY(0px); }
+  20% {
+    transform: translateY(20px); }
+  40% {
+    transform: translateY(-20px); }
+  50% {
+    transform: translateY(0px); } }
+
+@keyframes porchecabrer {
+  0% {
+    transform: translateY(0px);
+    transform: rotate(0deg); }
+  20% {
+    transform: translateY(20px);
+    transform: rotate(-10deg); }
+  40% {
+    transform: translateY(-20px);
+    transform: rotate(0deg); }
+  50% {
+    transform: translateY(0px);
+    transform: rotate(0); }
+  60% {
+    transform: translateY(0px);
+    transform: rotate(0deg); }
+  70% {
+    transform: translateY(20px);
+    transform: rotate(10deg); }
+  80% {
+    transform: translateY(-20px);
+    transform: rotate(0deg); }
+  85% {
+    transform: translateY(20px);
+    transform: rotate(10deg); }
+  90% {
+    transform: translateY(-20px);
+    transform: rotate(0deg); }
+  95% {
+    transform: translateY(20px);
+    transform: rotate(10deg); }
+  100% {
+    transform: translateY(0px);
+    transform: rotate(0deg); } }
